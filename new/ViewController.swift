@@ -16,6 +16,26 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
          //let point = CGPoint(x: 0, y: 0)
         print(picColorHex)
+        print(picColorHex1)
+        print(picColorHex2)
+        print(picColorHex3)
+        print(picColorHex4)
+        print(picColorHex5)
+        print(picColorHex6)
+        print(picColorHex7)
+        print(picColorHex8)
+        print(picColorHex9)
+        print(picColorHex10)
+        print(picColorHex11)
+        print(picColorHex12)
+        print(picColorHex13)
+        print(picColorHex14)
+        print(picColorHex15)
+        print(picColorHex16)
+        print(picColorHex17)
+        print(picColorHex18)
+        print(picColorHex19)
+
         //let point = CGPoint.zero
 //        typealias NSRect = CGRect
 //        var image = UIImage(named:"tigers.jpg")
@@ -97,10 +117,50 @@ extension UIColor {
         )
     }
 }
-let pic = UIImage(named:"vibrantRed.png")
+let pic = UIImage(named:"colorgradient.jpg")
+let heightInPoints = pic!.size.height
+let widthInPoints = pic!.size.width
+let heightInPixels = heightInPoints * pic!.scale
+let widthInPixels = widthInPoints * pic!.scale
 let picColor = pic!.getPixelColor(pos: CGPoint.zero)
-let color = UIColor.red
+let picColor1 = pic!.getPixelColor(pos: CGPoint(x: (widthInPoints/2)+0.1, y: (heightInPoints/2)))
+let picColor2 = pic!.getPixelColor(pos: CGPoint(x: (widthInPoints/2), y: (heightInPoints/2)+0.1))
+let picColor3 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)-0.1, y: (heightInPixels/2)))
+let picColor4 = pic!.getPixelColor(pos: CGPoint(x: (widthInPoints/2), y: (heightInPoints/2)-0.1))
+let picColor5 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)+0.1, y: (widthInPixels/2)+0.1))
+let picColor6 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)-0.1, y: (widthInPixels/2)-0.1))
+let picColor7 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2), y: (widthInPixels/2)))
+let picColor8 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)-0.2, y: (widthInPixels/2)))
+let picColor9 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)+0.2, y: (widthInPixels/2)))
+let picColor10 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2), y: (widthInPixels/2)-0.2))
+let picColor11 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2), y: (widthInPixels/2)+0.2))
+let picColor12 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)-0.2, y: (widthInPixels/2)-0.1))
+let picColor13 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)+0.2, y: (widthInPixels/2)+0.1))
+let picColor14 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)-0.1, y: (widthInPixels/2)-0.2))
+let picColor15 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)+0.1, y: (widthInPixels/2)+0.2))
+let picColor16 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)+0.2, y: (widthInPixels/2)-0.1))
+let picColor17 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)-0.2, y: (widthInPixels/2)+0.1))
+let picColor18 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)-0.1, y: (widthInPixels/2)+0.2))
+let picColor19 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)+0.1, y: (widthInPixels/2)-0.2))
 
-let hex = color.toHexString
 let picColorHex = picColor.toHexString
+let picColorHex1 = picColor1.toHexString
+let picColorHex2 = picColor2.toHexString
+let picColorHex3 = picColor3.toHexString
+let picColorHex4 = picColor4.toHexString
+let picColorHex5 = picColor5.toHexString
+let picColorHex6 = picColor6.toHexString
+let picColorHex7 = picColor7.toHexString
+let picColorHex8 = picColor8.toHexString
+let picColorHex9 = picColor9.toHexString
+let picColorHex10 = picColor10.toHexString
+let picColorHex11 = picColor11.toHexString
+let picColorHex12 = picColor12.toHexString
+let picColorHex13 = picColor13.toHexString
+let picColorHex14 = picColor14.toHexString
+let picColorHex15 = picColor15.toHexString
+let picColorHex16 = picColor16.toHexString
+let picColorHex17 = picColor17.toHexString
+let picColorHex18 = picColor18.toHexString
+let picColorHex19 = picColor19.toHexString
 // hex = "FF0000"
