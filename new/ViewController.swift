@@ -97,7 +97,7 @@ extension UIColor {
         )
     }
 }
-let pic = UIImage(named:"tigers.jpg")
+let pic = UIImage(named:"vibrantRed.png")
 let picColor = pic!.getPixelColor(pos: CGPoint.zero)
 let color = UIColor.red
 
