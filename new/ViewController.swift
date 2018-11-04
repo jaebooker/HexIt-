@@ -10,27 +10,39 @@ import UIKit
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
+        var count = pixelArray.count
+        var n = 0
         
-        print(picColorHex)
-        print(picColorHex1)
-        print(picColorHex2)
-        print(picColorHex3)
-        print(picColorHex4)
-        print(picColorHex5)
-        print(picColorHex6)
-        print(picColorHex7)
-        print(picColorHex8)
-        print(picColorHex9)
-        print(picColorHex10)
-        print(picColorHex11)
-        print(picColorHex12)
-        print(picColorHex13)
-        print(picColorHex14)
-        print(picColorHex15)
-        print(picColorHex16)
-        print(picColorHex17)
-        print(picColorHex18)
-        print(picColorHex19)
+        while n < count {
+            var index = n+1
+            var newSwitch = false
+            var didDestroy = false
+            while index < count {
+                if pixelDict[pixelArray[n]] == nil {
+                    pixelDict[pixelArray[n]] = 1
+                    newSwitch = true
+                }
+                if pixelArray[n] == pixelArray[index] {
+                    pixelDict[pixelArray[n]] = pixelDict[pixelArray[n]]! + 1
+                    if newSwitch {
+                        pixelArray.remove(at: index)
+                        count -= 1
+                        if didDestroy == false {
+                            didDestroy = true
+                        }
+                    }
+                }
+                if didDestroy == true {
+                    index -= 1
+                }
+                index += 1
+            }
+            if didDestroy == true {
+                n -= 1
+            }
+            n += 1
+        }
+        print(pixelDict)
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -115,3 +127,6 @@ let picColorHex16 = picColor16.toHexString
 let picColorHex17 = picColor17.toHexString
 let picColorHex18 = picColor18.toHexString
 let picColorHex19 = picColor19.toHexString
+
+var pixelArray = [picColorHex1, picColorHex2, picColorHex3, picColorHex4, picColorHex5, picColorHex6, picColorHex7, picColorHex8, picColorHex9, picColorHex10, picColorHex11, picColorHex12, picColorHex13, picColorHex14, picColorHex15, picColorHex16, picColorHex17, picColorHex18, picColorHex19]
+var pixelDict = [picColorHex1: 0]
