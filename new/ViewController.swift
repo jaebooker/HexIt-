@@ -11,8 +11,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         var picAppend: [String] = [""]
-        var range1: CGFloat = 0.1
-        let range2: CGFloat = 1.0
+        var range1: CGFloat = 0.01
+        let range2: CGFloat = 1.00
         while range1 < range2 {
             let ipicColor1 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)+range1, y: (widthInPixels/2)))
             let ipicColor2 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)-range1, y: (widthInPixels/2)))
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
             picAppend.append(ipicColorHex2)
             picAppend.append(ipicColorHex3)
             picAppend.append(ipicColorHex4)
-            range1 += 0.1
+            range1 += 0.01
         }
         print(picAppend)
         var count = pixelArray.count
