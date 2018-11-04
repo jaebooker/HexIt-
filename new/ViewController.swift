@@ -8,13 +8,9 @@
 
 import UIKit
 class ViewController: UIViewController {
-    //init(x: Int, y: Int)
-//    let params = ["username":"john", "password":"123456"] as Dictionary<String, String>
-//
-//    var request = URLRequest(url: URL(string: "http://localhost:8080/api/1/login")!)
-//
+    
     override func viewDidLoad() {
-         //let point = CGPoint(x: 0, y: 0)
+        
         print(picColorHex)
         print(picColorHex1)
         print(picColorHex2)
@@ -35,47 +31,7 @@ class ViewController: UIViewController {
         print(picColorHex17)
         print(picColorHex18)
         print(picColorHex19)
-
-        //let point = CGPoint.zero
-//        typealias NSRect = CGRect
-//        var image = UIImage(named:"tigers.jpg")
-//        var rect = NSRect(x: 0, y: 0, width: image!.size.width, height: image!.size.height)
-//        let cgImage = image.CGImageForProposedRect(&rect, context: nil, hints: nil)!.takeUnretainedValue()
-//        let bitmapRep = NSBitmapImageRep(CGImage: cgImage)
-//        if let imageData = bitmapRep.representationUsingType(NSBitmapImageFileType.NSPNGFileType, properties: [:]) {
-//            let len = imageData.length
-//
-//            var bytes = [UInt8](count: len, repeatedValue: 0)
-//            imageData.getBytes(&bytes, length: len)
-//
-//            var result = ""
-//
-//            for i in 0...len - 1 {
-//                if i > 0 {
-//                    result += ","
-//                }
-//
-//                result += String(format: "0x%x", arguments: [bytes[i]])
-//            }
-//
-//            println(result)
- //       }
-//        request.httpMethod = "POST"
-//        request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
-//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//
-//        let session = URLSession.shared
-//        let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
-//            print(response!)
-//            do {
-//                let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
-//                print(json)
-//            } catch {
-//                print("error")
-//            }
-//        })
-//
-//        task.resume()
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -93,9 +49,7 @@ extension UIImage {
         let g = CGFloat(data[pixelInfo+1]) / CGFloat(255.0)
         let b = CGFloat(data[pixelInfo+2]) / CGFloat(255.0)
         let a = CGFloat(data[pixelInfo+3]) / CGFloat(255.0)
-//        let point = String(data[pixelInfo])
-//        let pointHex = String(Int(point, radix: 2)!, radix: 16)
-//        print(pointHex)
+        
         return UIColor(red: r, green: g, blue: b, alpha: a)
     }
     
@@ -122,7 +76,6 @@ let heightInPoints = pic!.size.height
 let widthInPoints = pic!.size.width
 let heightInPixels = heightInPoints * pic!.scale
 let widthInPixels = widthInPoints * pic!.scale
-let picColor = pic!.getPixelColor(pos: CGPoint.zero)
 let picColor1 = pic!.getPixelColor(pos: CGPoint(x: (widthInPoints/2)+0.1, y: (heightInPoints/2)))
 let picColor2 = pic!.getPixelColor(pos: CGPoint(x: (widthInPoints/2), y: (heightInPoints/2)+0.1))
 let picColor3 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)-0.1, y: (heightInPixels/2)))
@@ -143,7 +96,6 @@ let picColor17 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)-0.2, y: (w
 let picColor18 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)-0.1, y: (widthInPixels/2)+0.2))
 let picColor19 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)+0.1, y: (widthInPixels/2)-0.2))
 
-let picColorHex = picColor.toHexString
 let picColorHex1 = picColor1.toHexString
 let picColorHex2 = picColor2.toHexString
 let picColorHex3 = picColor3.toHexString
@@ -163,4 +115,3 @@ let picColorHex16 = picColor16.toHexString
 let picColorHex17 = picColor17.toHexString
 let picColorHex18 = picColor18.toHexString
 let picColorHex19 = picColor19.toHexString
-// hex = "FF0000"
