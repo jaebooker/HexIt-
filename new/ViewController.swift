@@ -10,9 +10,29 @@ import UIKit
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
+        var picAppend: [String] = [""]
+        var range1: CGFloat = 0.1
+        let range2: CGFloat = 1.0
+        while range1 < range2 {
+            let ipicColor1 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)+range1, y: (widthInPixels/2)))
+            let ipicColor2 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2)-range1, y: (widthInPixels/2)))
+            let ipicColor3 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2), y: (widthInPixels/2)+range1))
+            let ipicColor4 = pic!.getPixelColor(pos: CGPoint(x: (widthInPixels/2), y: (widthInPixels/2)-range1))
+            
+            let ipicColorHex1 = ipicColor1.toHexString
+            let ipicColorHex2 = ipicColor2.toHexString
+            let ipicColorHex3 = ipicColor3.toHexString
+            let ipicColorHex4 = ipicColor4.toHexString
+            
+            picAppend.append(ipicColorHex1)
+            picAppend.append(ipicColorHex2)
+            picAppend.append(ipicColorHex3)
+            picAppend.append(ipicColorHex4)
+            range1 += 0.1
+        }
+        print(picAppend)
         var count = pixelArray.count
         var n = 0
-        
         while n < count {
             var index = n+1
             var newSwitch = false
@@ -83,7 +103,7 @@ extension UIColor {
         )
     }
 }
-let pic = UIImage(named:"colorgradient.jpg")
+let pic = UIImage(named:"tigers.jpg")
 let heightInPoints = pic!.size.height
 let widthInPoints = pic!.size.width
 let heightInPixels = heightInPoints * pic!.scale
